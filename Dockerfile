@@ -21,8 +21,8 @@ RUN apt-get update && \
     apt-get install -y ca-certificates && \
     rm -rf /var/lib/apt/lists/*
 
-COPY --from=builder /app/target/release/rusty-audio-bridge /app/rusty-audio-bridge
+COPY --from=builder /app/target/release/rust-kv /app/rust-kv
 
 EXPOSE 3000
 
-CMD ["/app/rusty-audio-bridge"]
+CMD ["/app/rust-kv"]

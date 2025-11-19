@@ -1,14 +1,11 @@
 services:
-  rusty-audio-bridge:
+  rust-kv:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: rusty-audio-bridge
+    container_name: rust-kv
     ports:
       - "3000:3000"
     environment:
       - RUST_LOG=info
     restart: unless-stopped
-    # Uncomment if you need to mount volumes
-    # volumes:
-    #   - ./data:/app/data
